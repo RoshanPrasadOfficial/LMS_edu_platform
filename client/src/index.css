@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-display: 'Montserrat', sans-serif;
+  --font-body: 'Open Sans', sans-serif;
+
+  /* Primary Blue: #007bff */
+  --primary: 211 100% 50%;
+  --primary-foreground: 0 0% 100%;
+
+  /* Accent Orange: #fd7e14 */
+  --accent: 27 98% 54%;
+  --accent-foreground: 0 0% 100%;
+
+  /* Backgrounds */
+  --background: 0 0% 100%;
+  --foreground: 222 47% 11%;
+
+  --card: 0 0% 100%;
+  --card-foreground: 222 47% 11%;
+  
+  --muted: 210 40% 96.1%;
+  --muted-foreground: 215.4 16.3% 46.9%;
+
+  --border: 214.3 31.8% 91.4%;
+  --input: 214.3 31.8% 91.4%;
+  --ring: 211 100% 50%;
+
+  --radius: 0.5rem;
+}
+
+@layer base {
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: var(--font-body);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    @apply font-bold tracking-tight;
+  }
+}
+
+@layer components {
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+}
